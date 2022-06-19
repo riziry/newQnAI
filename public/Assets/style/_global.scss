@@ -1,0 +1,56 @@
+@import 'color';
+@import 'font';
+@import 'button';
+@import 'navbar';
+
+*{
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    transition: .3s ease-in-out all;
+}
+
+.section-first-margin {
+    margin-top: 100px;
+}
+
+.section-thread-margin {
+    margin-top: 50px;
+}
+
+.label-section {
+    font-weight: map-get($map: $font-weight, $key: medium);
+    font-size: 36px;
+    color: $fourd-color;
+}
+
+.sublabel-section {
+    font-weight: map-get($map: $font-weight, $key: light);
+    font-size: 18px;
+    color: $fourd-color;
+}
+
+.card-question-title {
+    font-weight: map-get($map: $font-weight, $key: medium);
+    font-size: 20px;
+    color: $fourd-color;
+}
+
+.card-question-sub {
+    font-weight: map-get($map: $font-weight, $key: light);
+    font-size: 14px;
+    color: $fourd-color;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+
+

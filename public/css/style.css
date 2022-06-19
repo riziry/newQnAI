@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+li,
+a,
+button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  z-index: 9;
+  background-color: white;
+}
+
+/* searchbar */
+.searchBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#searchQueryInput {
+  width: 100%;
+  height: 2.8rem;
+  background: #f5f5f5;
+  outline: none;
+  border: none;
+  border-radius: 1.625rem;
+  padding: 0 3.5rem 0 1.5rem;
+  font-size: 1rem;
+}
+
+#searchQuerySubmit {
+  width: 3.5rem;
+  height: 2.8rem;
+  margin-left: -3.5rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#searchQuerySubmit:hover {
+  cursor: pointer;
+}
+/* searchbar end */
+
+.nav__links {
+  list-style: none;
+  overflow: hidden;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+  
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+  border-bottom: 2px solid transparent;
+}
+
+.nav__links li a:hover {
+  color: #FBC948;
+}
+
+.nav__links li a.active {
+  border-bottom: 2px solid #FBC948;
+}
+
+button {
+  padding: 9px 25 px;
+  background-color: rgba(251, 201, 72, 1);
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.button-search {
+  background-color: #f9f9f9;
+}
+
+.button-search:hover {
+  background-color: rgba(226, 226, 226, 0.8);
+}
+
+.question-card-button {
+  font-size: 80%;
+  background-color: #f9f9f9;
+  color: black;
+  font-weight: bold;
+  width: 36%;
+  height: 40%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.question-card-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+button:hover {
+  background-color: rgba(251, 201, 72, 0.8);
+}
+
+.button-read-more {
+  font-size: 60%;
+  background-color: white;
+}
+
+.button-read-more:hover {
+  background-color: white;
+}
+
+.logo {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.profile-pic {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  right: 10%;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  border-radius: 10%;
+  margin-top: 10px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+}
+
+.show {
+  display: block;
+}
+
+.input text {
+  border-radius: 10px 10px 10px 10px;
+}
+
+.content {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50%;
+}
+
+.p1 {
+  font-size: 160%;
+  font-weight: bold;
+}
+
+.p2 {
+  font-size: 80%;
+}
+
+.search-box {
+  border-radius: 10px 10px 10px 10px;
+  border-width: thin;
+  padding-left: 10px;
+}
+
+.center {
+  margin: auto;
+}
+
+.question-card {
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 25%;
+  left: 25%;
+  top: 16%;
+
+  background: linear-gradient(123.97deg, #FBC948 13.92%, #FBA948 265.16%);
+  border-radius: 15px;
+}
+
+.white-logo {
+  width: 16%;
+  height: 12%;
+  margin-left: 5%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  margin-right: 5%;
+}
+
+.question-card pic {
+  background-color: inherit;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex: row;
+}
+
+.question-card text {
+  background-color: inherit;
+  margin-top: 4%;
+  margin-bottom: 5%;
+  right: 0;
+}
+
+.question-detail-card {
+  display: block;
+  width: 50%;
+  height: 20%;
+  margin-top: 2px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  border-radius: 15px;
+
+  left: 25%;
+  top: 44%;
+}
+
+.question-detail-card container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3.5%;
+  padding-left: 4%;
+}
+
+.question-detail-card pic {
+  background-color: inherit;
+  top: 10%;
+  right: 10%;
+  padding-right: 4%;
+  text-align: center;
+}
+
+.right-line {
+  max-width: 1px;
+  max-height: 64px;
+}
+
+.question-detail-card text {
+  background-color: inherit;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 0;
+  margin-bottom: 2%;
+  height: 4%;
+}
+
+#content {
+  height: 3em;
+  line-height: 1em;
+  overflow: hidden;
+}
+
+.bold-card {
+  font-size: 80%;
+  font-weight: 600;
+}
+
+.regular-card {
+  font-size: 60%;
+}
+
+.dot {
+  height: 75px;
+  width: 75px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 7%;
+  margin-left: 20%;
+}
+
+.nexttodot {
+  margin-left: 95px;
+}
+
+.question-container {
+  width: 1000px;
+  height: 200px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+hr {
+  width: 1250px;
+  margin-left: 15%;
+}
+
+.leaderboard {
+  display: block;
+  position: absolute;
+  width: 34%;
+  top: 14%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.profile {
+  display: block;
+  position: absolute;
+  width: 90%;
+  top: 10%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.top-user-card {
+  position: relative;
+  margin: auto;
+  padding-bottom: 10px;
+  width: 50%;
+  height: 170px;
+}
+
+.profile-card {
+  position: relative;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 170px;
+}
+
+img.rounded {
+  float: left;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+img.roundedprofile {
+  float: left;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+
+.number {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.number p {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-stroke: 2px #fbc748;
+  font-size: 4em;
+  font-weight: bolder;
+  color: #f9f9f9;
+}
+
+/*
+ CSS for the tabs profile
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+ Styling
+*/
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 10px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/*.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #8d8d8d;
+}*/
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: #fbc748;
+}
+
+/*.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #fbc748;
+}*/
+
+.tabset > input:checked + label {
+  /*border-color: #ccc;*/
+  border-bottom: 3px solid #fbc748;
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+/*
+ Demo purposes only
+*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.tabset {
+  max-width: 90%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
