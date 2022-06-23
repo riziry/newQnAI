@@ -1,36 +1,42 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
 
-        <title>{{ config('QnAI', 'QnAI') }}</title>
+<head>
+	@include('layouts.htmlconfig')
+</head>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+<body>
+	<!-- font awesome icon  -->
+	<script src="https://kit.fontawesome.com/9641d2c6f3.js" crossorigin="anonymous"></script>
+	<!-- end font awesome icon -->
+	<header>
+		@auth
+			@include('layouts.navbar-loggedin')
+		@else
+			@include('layouts.navbar-guest')
+		@endauth	
+	</header>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+	<main>
+		@switch (url()->current())
+			@case('http://localhost:8000')
+				@include('frontend.layouts.timeline')
+				@break
+			@case('http://localhost:8000/dashboard')
+				@include('frontend.layouts.timeline')
+				@break
+			@case('http://localhost:8000/leaderboard')
+				@include('frontend.layouts.rank')
+				@break
+			@case('http://localhost:8000/notification')
+				@include('frontend.layouts.notif-info')
+				@break
+		@endswitch
+	</main>
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+	<script>
+		
+	</script>
+</body>
 
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body>
 </html>

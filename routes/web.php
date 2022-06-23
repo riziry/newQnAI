@@ -21,4 +21,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/leaderboard', function () {
+    return view('frontend.leaderboard');
+});
+
+Route::get('/notification', function () {
+    return view('frontend.notification');
+});
+
 require __DIR__.'/auth.php';
