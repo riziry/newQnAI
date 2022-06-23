@@ -10,3 +10,24 @@ QnAI is web application forum that focused on Artificial Intelligence and Machin
 -	[Hajarot Najiha](https://github.com/najihajarot) - 1301194259
 -	Pernanda Bagaskara
 -	Rifaldy Bintang
+
+## Installation
+<h3>linux</h3>
+-   Install dependency
+
+```zsh
+sudo apt install git php composer
+git clone https://github.com/riziry/newQnAI.git
+```
+
+-   config .env with your database(MySQL)
+-   start database service
+-   create empty database with name QnAI
+
+```
+cd newQnAI
+php artisan serve
+```
+
+<h3>Windows</h3>
+-   #
