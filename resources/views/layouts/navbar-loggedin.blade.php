@@ -26,7 +26,7 @@
         {{ Auth::user()->name }}
     </button>
     <div id="myDropdown" class="dropdown-content">
-        <a href="#">Profile</a>
+        <a href="{{ url('/profile') }}">Profile</a>
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <a href="{{ route('logout') }}" onclick="event.preventDefault();this.closest('form').submit();">

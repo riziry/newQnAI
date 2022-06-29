@@ -31,11 +31,13 @@
 			@case('http://localhost:8000/notification')
 				@include('frontend.layouts.notif-info')
 				@break
+			@case('http://localhost:8000/profile')
+				@include('frontend.layouts.profile-content')
 		@endswitch
 	</main>
 
 	<script>
-		
+
 	</script>
 </body>
 

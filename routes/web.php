@@ -29,4 +29,8 @@ Route::get('/notification', function () {
     return view('frontend.notification');
 });
 
+Route::get('/profile', function () {
+    return view('frontend.profile');
+});
+
 require __DIR__.'/auth.php';
