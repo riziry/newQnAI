@@ -10,7 +10,14 @@ class QuestionController extends Controller
 {
     public function see() {
         $questions = Question::all();
-        return view('dashboard', compact('questions'));
+        foreach ($questions as $question) {
+            $question->name = User::find($question->uID)->name;
+        }
+
+        $descending = $questions->sortByDesc('updated_at');
+
+        // dd($descending);
+        return view('dashboard', compact('descending'));
     }
 
     public function create() {
