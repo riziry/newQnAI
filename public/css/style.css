@@ -313,12 +313,12 @@ button:hover {
 }
 
 .bold-card {
-  font-size: 80%;
+  font-size: 100%;
   font-weight: 600;
 }
 
 .regular-card {
-  font-size: 60%;
+  font-size: 80%;
 }
 
 .dot {
