@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\LeaderboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +15,13 @@ use App\Http\Controllers\QuestionController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcomepage');
-});
+Route::get('/', [QuestionController::class, 'see']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/leaderboard', function () {
-    return view('frontend.leaderboard');
-});
+Route::get('/leaderboard', [LeaderboardController::class, 'index']);
 
 Route::get('/notification', function () {
     return view('frontend.notification');
