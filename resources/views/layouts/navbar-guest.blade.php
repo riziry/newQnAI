@@ -8,9 +8,9 @@
 <img class="logo" src="Assets/images/nav_logo.png" alt="logo">
 <nav>
     <ul class="nav__links">
-        <li><a class="active" href="/">Home</a></li>
-        <li><a href="/leaderboard">Leaderboard</a></li>
-        <li><a href="{{ url('/notification') }}">Notification</a></li>
+    <li><a id="btn-home" onclick="activeHome()" href="/">Home</a></li>
+        <li><a id="btn-leaderboard" href="{{ url('/leaderboard') }}">Leaderboard</a></li>
+        <li><a id="btn-notif" href="{{ url('/notification') }}">Notification</a></li>
         <li class="search-container">
             <form class="searchBar">
                 <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
@@ -51,5 +51,20 @@
             myDropdown.classList.remove('show');
         }
         }
+    }
+
+    function botBorder() {
+        var botBorder = document.getElementById("");
+        botBorder.style.borderBottom = "1px solid #ccc";
+    }
+
+    var btnHome = document.getElementById("btn-home");
+    var btnLeaderboard = document.getElementById("btn-leaderboard");
+    var btnNotif = document.getElementById("btn-notif");
+
+    function activeHome() {
+        btnHome.classList.add("active");
+        btnLeaderboard.classList.remove("active");
+        btnNotif.classList.remove("active");
     }
 </script>

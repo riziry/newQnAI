@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +33,8 @@ Route::get('/notification', function () {
 Route::get('/profile', function () {
     return view('frontend.profile');
 });
+
+Route::get('/ask', [QuestionController::class, 'create']);
+Route::post('/ask', [QuestionController::class, 'store']);
 
 require __DIR__.'/auth.php';
