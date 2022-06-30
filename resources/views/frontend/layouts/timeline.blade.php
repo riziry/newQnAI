@@ -15,21 +15,21 @@
 			</pic>
 		</div>
         
-        @foreach ($questions as $question)
+        @foreach ($descending as $question)
             <a href="">
                 <div class="question-detail-card">
                 <container>
                     <pic>
-                    <img class="profile-pic" src="Assets/images/profile_pic.png" alt="profile">
-                    <p class="bold-card">{{   $question->uID  }}</p>
-                    <p class="regular-card">{{    $question->updated_at   }}</p>
+                        <img class="profile-pic" src="Assets/images/profile_pic.png" alt="profile">
+                        <p class="bold-card">{{ $question->name  }}</p>
+                        <p class="regular-card">{{    $question->updated_at   }}</p>
                     </pic>
                     <img class="right-line" src="Assets/images/right-line.png" alt="I">
                     <text>
-                    <p class="bold-card">{{   $question->title    }}</p>
-                    <p class="regular-card" id="content">{{   $question->content  }}</p>
-                    <!-- <button class="button-read-more" onclick ="location.href='#'"> Read more </button> -->
-                    <br>
+                        <p class="bold-card">{{   $question->title    }}</p>
+                        <p class="regular-card" id="content">{{   $question->content  }}</p>
+                        <!-- <button class="button-read-more" onclick ="location.href='#'"> Read more </button> -->
+                        <br>
                     </text>
                 </container>
                 </div>

@@ -2,9 +2,9 @@
     <div class="content" style="margin-top: 350px;">
         <div class="profile">
             <div class="profile-card">
-            <img src="assets/johndoe.jpg" class="roundedprofile">
+            <img src="Assets/images/johndoe.jpg" class="roundedprofile">
             <h1 style="padding-top: 40px;font-weight: bolder;font-size: 45px;">{{ Auth::user()->name }}</h1>
-            <p>{{ Auth::user()->points }}</p>
+            <p>Points : {{ Auth::user()->points }}</p>
           </div>
         </div>
         <div class="tabset">

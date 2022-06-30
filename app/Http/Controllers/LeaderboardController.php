@@ -10,9 +10,7 @@ class LeaderboardController extends Controller
     public function index(){
 
         $users = User::all();
-        $rank = $users->unique('points')->values()->mapWithKeys(function ($item, $index){
-            return [$index+1 => $item];
-        });
+        $rank = $users->sortByDesc('points')->take(3);  
         // dd($rank);
 
         return view('frontend.leaderboard', compact('rank'));
