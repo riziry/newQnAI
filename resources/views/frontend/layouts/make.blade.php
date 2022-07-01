@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="css/style-roti.css">
+<!-- <link rel="stylesheet" href="/css/style-roti.css"> -->
 <div class="form-content">
-    <form action="" method="POST">
+    <form action="/" method="POST">
         @csrf
         <p class="p1">Title</p>
         <p class="p2">Type in your simplified question</p>

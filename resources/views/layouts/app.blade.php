@@ -37,8 +37,11 @@
 			@case('http://localhost:8000/profile/edit')
 				@include('frontend.layouts.profile-edit')
 				@break
-			@case('http://localhost:8000/ask')
+			@case('http://localhost:8000/question/ask')
 				@include('frontend.layouts.make')
+				@break
+			@case('http://localhost:8000/question/{id}/edit')
+				@include('frontend.layouts.edit')
 				@break
 
 		@endswitch

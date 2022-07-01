@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\LeaderboardController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,11 +28,14 @@ Route::get('/notification', function () {
     return view('frontend.notification');
 });
 
-Route::get('/profile', function () {
-    return view('frontend.profile');
-});
+Route::get('/profile', [profileController::class, 'index']);
 
-Route::get('/ask', [QuestionController::class, 'create']);
-Route::post('/ask', [QuestionController::class, 'store']);
+Route::get('/question/ask', [QuestionController::class, 'create']);
+Route::post('/', [QuestionController::class, 'store']);
+
+Route::get('/question/{id}/edit', [QuestionController::class, 'edit']);
+route::put('/question/{id}', [QuestionController::class, 'update']);
+
+Route::delete('/question/{id}', [QuestionController::class, 'destroy']);
 
 require __DIR__.'/auth.php';

@@ -7,7 +7,7 @@
 				    <p class="p1">Anything we can help?</p>
 				    <p class="p2">Ask a question so that we can help you!</p>
                     @auth
-				        <a href="{{ url('/ask')   }}"><button class="question-card-button">Ask question</button></a>
+				        <a href="{{ url('/question/ask')   }}"><button class="question-card-button">Ask question</button></a>
                     @else
                         <a href="{{ route('login') }}"><button class="question-card-button">Ask question</button></a>
                     @endauth
