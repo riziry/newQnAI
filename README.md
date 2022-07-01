@@ -26,6 +26,8 @@ git clone https://github.com/riziry/newQnAI.git
 
 ```
 cd newQnAI
+composer install
+php artisan migrate
 php artisan serve
 ```
 
