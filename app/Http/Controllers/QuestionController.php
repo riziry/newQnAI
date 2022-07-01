@@ -32,4 +32,21 @@ class QuestionController extends Controller
 
         return redirect('/');
     }
+
+    public function edit($id){
+        $question=Question::find($id);
+        return view('frontend.editQuestion', compact('question'));
+    }
+
+    public function update(Request $request, $id){
+        $question=Question::find($id);
+        $question->update($request->all());
+        return redirect('/profile');
+    }
+
+    public function destroy($id){
+        $question=Question::find($id);
+        $question->delete();
+        return redirect('/profile');
+    }
 }
